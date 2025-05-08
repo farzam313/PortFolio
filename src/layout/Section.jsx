@@ -4,7 +4,7 @@ const Section = ({ id, children, className = " " }) => {
   return (
     <section
       id={id}
-      className={` flex flex-col   min-h-screen  px-4 m-[8px] border-l-2 border-r-2 border-gray-500 pt-20 ${className}`}
+      className={` flex flex-col   min-h-screen  px-4 m-[8px] border-l-2 border-r-2 border-gray-500 pt-20 my-0 ${className}`}
     >
       {/* <div className="flex flex-col h-full align-center justify-content-center ">
         <PlusSvg className="" />
