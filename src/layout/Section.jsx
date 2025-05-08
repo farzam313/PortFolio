@@ -1,4 +1,4 @@
-import PlusSvg from "./svg/PlusSvg";
+import PlusSvg from "../assets/svg/PlusSvg";
 
 const Section = ({ id, children, className = " " }) => {
   return (

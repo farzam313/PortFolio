@@ -1,12 +1,12 @@
 import "./App.css";
-import Hero from "./Sections/Hero";
-import About from "./Sections/About";
-import Contacts from "./Sections/Contacts";
-import Services from "./Sections/Services";
-import Projects from "./Sections/Projects";
-import Section from "./components/Section";
-import Header from "./components/Header";
-import SectionSeprator from "./components/SectionSeprator";
+import Hero from "./components/Sections/Hero";
+import About from "./components/Sections/About";
+import Contacts from "./components/Sections/Contacts";
+import Services from "./components/Sections/Services";
+import Projects from "./components/Sections/Projects";
+import Section from "./layout/Section";
+import Header from "./layout/Header";
+import SectionSeprator from "./layout/SectionSeprator";
 
 function App() {
   return (
