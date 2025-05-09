@@ -12,42 +12,58 @@ const navItems = [
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  return (
-    <header className="fixed top-0 left-0 w-full bg-gray-800 text-white h-16 z-50 shadow-md">
-      {/* menu... */}
-      <div className="text-lg font-bold">Portfolio</div>
-      <div className="md:hidden h-full px-4">
-        <button onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
-        </button>
-      </div>
-      <nav className="hidden md:flex justify-center space-x-6  ">
-        {navItems.map((item) => (
-          <div
-            key={item.id}
-            className="h-full px-4 flex items-center hover:bg-gray-700 align-center justify-center p-4 rounded "
-          >
-            <a href="`#${item.id}`" className="block w-full h-full">
-              {item.label}
-            </a>
-          </div>
-        ))}
-      </nav>
 
-      {isOpen && (
-        <nav className="md:hidden mt-4 flex flex-col space-y-4 bg-blue-400">
-          {navItems.map((item) => (
-            <a
-              key={item.id}
-              href="`#${item.id}` "
-              onClick={() => setIsOpen(false)}
-            >
-              {item.label}
-            </a>
-          ))}
-        </nav>
-      )}
-    </header>
+  const ToggleMenu = () => (
+    <div className="bg-gray-800 px-4 py-2 rounded-full hover:bg-gray-700 transition duration-100 ease-in-out">
+      <button onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+      </button>
+    </div>
+  );
+
+  const Icon = () => (
+    <div className="block items-center justify-between h-full w-full px-4">
+      <a href="#home">{"<Farzam />"}</a>
+    </div>
+  );
+  const NavBar = ({ className = " " }) => (
+    <nav className={`flex  items-center  justify-center  h-full ${className}`}>
+      {navItems.map((item) => (
+        <a
+          href={`#${item.id}`}
+          className="flex w-full h-full justify-center hover:bg-blue-300 rounded-2xl transition duration-100 ease-in-out"
+          onClick={() => setIsOpen(false)}
+        >
+          <div className="flex py-4 px-4 justify-center ">{item.label}</div>
+        </a>
+      ))}
+    </nav>
+  );
+
+  return (
+    <>
+      <header className="hidden md:flex  fixed justify-between top-0 left-0 w-full bg-gray-800 text-white h-16 z-50 shadow-md">
+        <div className="flex items-center justify-between h-full w-full">
+          {<Icon />}
+
+          {<NavBar className="gap-4 px-4 " />}
+        </div>
+      </header>
+
+      <header className="md:hidden fixed flex-col top-0 left-0 w-full  text-white z-50 shadow-md">
+        <div className="flex items-center bg-gray-800 justify-between w-full py-4 mb-[1px]">
+          <Icon />
+          <ToggleMenu />
+        </div>
+        <div>
+          {isOpen && (
+            <div className="flex flex-col items-center justify-center w-full  bg-gray-800 min-h-screen">
+              <NavBar className="flex-col w-full " />
+            </div>
+          )}
+        </div>
+      </header>
+    </>
   );
 };
 
