@@ -22,19 +22,21 @@ const Header = () => {
   );
 
   const Icon = () => (
-    <div className="block items-center justify-between h-full w-full px-4">
-      <a href="#home">{"<Farzam />"}</a>
+    <div className="block items-center justify-between h-full w-full py-4 px-4">
+      <a className="font-bold text-2xl  " href="#home">
+        {"<Farzam />"}
+      </a>
     </div>
   );
   const NavBar = ({ className = " " }) => (
-    <nav className={`flex  items-center  justify-center  h-full ${className}`}>
+    <nav className={`flex  items-center  justify-center  h-full  ${className}`}>
       {navItems.map((item) => (
         <a
           href={`#${item.id}`}
-          className="flex w-full h-full justify-center hover:bg-blue-300 rounded-2xl transition duration-100 ease-in-out"
+          className="flex w-full h-full justify-center py-4  hover:bg-gray-600 rounded-2xl transition duration-500 ease-in-out"
           onClick={() => setIsOpen(false)}
         >
-          <div className="flex py-4 px-4 justify-center ">{item.label}</div>
+          <div className="flex py-1 px-4 justify-center ">{item.label}</div>
         </a>
       ))}
     </nav>
@@ -42,7 +44,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="hidden md:flex  fixed justify-between top-0 left-0 w-full bg-gray-800 text-white h-16 z-50 shadow-md">
+      <header className="hidden md:flex  fixed justify-between top-0 left-0 w-full bg-gray-800 text-white h-16 z-50">
         <div className="flex items-center justify-between h-full w-full">
           {<Icon />}
 
@@ -51,13 +53,13 @@ const Header = () => {
       </header>
 
       <header className="md:hidden fixed flex-col top-0 left-0 w-full  text-white z-50 shadow-md">
-        <div className="flex items-center bg-gray-800 justify-between w-full py-4 mb-[1px]">
+        <div className="flex items-center bg-gray-800 justify-between w-full py-4 mb-[0.5px]">
           <Icon />
           <ToggleMenu />
         </div>
         <div>
           {isOpen && (
-            <div className="flex flex-col items-center justify-center w-full  bg-gray-800 min-h-screen">
+            <div className="flex flex-col items-center justify-center w-full  bg-gray-800 h-[90vh] py-30">
               <NavBar className="flex-col w-full " />
             </div>
           )}
