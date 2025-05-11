@@ -2,9 +2,23 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="text-center my-10   ">
-      <h4 className="text-3xl  text-neutral-950">Welcome to My Portfolio</h4>
-      <p className="mt-4 text-lg">I am a passionate developer.</p>
+    <div
+      id="hero-container"
+      className="text-center  flex flex-row h-[100vh] w-[100%] justify-center items-center"
+    >
+      <div className="relative max-w-full overflow-hidden margin-auto flex-1 ">
+        <p width="wrap">
+          Yet bed any for travelling assistance indulgence unpleasing. Not
+          thoughts all exercise blessing
+        </p>
+      </div>
+      <div className="flex-1 flex justify-center items-center">
+        <img
+          src="f.png"
+          alt="Aliyawar Farzam"
+          className="rounded-full w-[200px] h-[200px] object-cover"
+        />
+      </div>
     </div>
   );
 };
