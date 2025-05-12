@@ -26,7 +26,7 @@ const Header = () => {
   return (
     <>
       <header className="hidden md:flex  fixed justify-between top-0 left-0 w-full bg-gray-800 text-white h-16 z-50">
-        <div className="flex items-center justify-between h-full w-full">
+        <div className="flex items-center justify-between  h-full w-full">
           {<Icon />}
 
           {<NavBar className="gap-4 px-4 " />}

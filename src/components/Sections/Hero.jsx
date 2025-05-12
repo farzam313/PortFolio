@@ -1,17 +1,18 @@
 import React from "react";
 
 const Hero = () => {
-  const bio = () => {};
+  const bio = () => (
+    <div>
+      <p>Hi, I am Aliyawar Farzam, front End web developer.</p>
+    </div>
+  );
   return (
     <div
       id="hero-container"
       className="text-center  flex flex-row h-[100vh] w-[100%] justify-center items-center"
     >
       <div className="relative max-w-full overflow-hidden margin-auto flex-1 ">
-        <p width="wrap">
-          Yet bed any for travelling assistance indulgence unpleasing. Not
-          thoughts all exercise blessing
-        </p>
+        {<bio />}
       </div>
       <div className="flex-1 flex justify-center items-center">
         <img
