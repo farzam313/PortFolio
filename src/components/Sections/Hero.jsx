@@ -1,6 +1,7 @@
 import React from "react";
 
 const Hero = () => {
+  const bio = () => {};
   return (
     <div
       id="hero-container"
