@@ -16,7 +16,7 @@ const Header = () => {
   );
 
   const Icon = () => (
-    <a href="#home">
+    <a href="#home" onClick={() => setIsOpen(false)}>
       <div className="block items-center justify-between h-[50px]   px-4">
         <DeveloperLogo />
       </div>

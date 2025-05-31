@@ -3,7 +3,9 @@ import Section from "../../layout/Section";
 
 const Projects = () => {
   return (
-    <h2 className="flex justify-center text-center my-10"> Projects...</h2>
+    <h2 className="flex justify-center text-center my-10">
+      Projects Page under construction
+    </h2>
   );
 };
 
