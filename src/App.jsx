@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Header />
-      <Section id="home" className="snap-start h-screen">
+      <Section id="home" className="snap-start ">
         <Hero />
       </Section>
       <SectionSeprator />
