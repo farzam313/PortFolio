@@ -17,7 +17,7 @@ function App() {
         <Hero />
       </Section>
       <SectionSeprator />
-      <Section id="services" className="snap-start h-screen">
+      <Section id="services" className="snap-start h-screen ">
         <Services />
       </Section>
       <SectionSeprator />

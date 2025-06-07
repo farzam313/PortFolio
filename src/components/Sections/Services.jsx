@@ -3,7 +3,7 @@ import Section from "../../layout/Section";
 
 const Services = () => {
   return (
-    <h1 className="flex justify-center text-center my-10">
+    <h1 className="flex justify-center text-center  my-10">
       Services-Under Construction...
     </h1>
   );
