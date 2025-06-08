@@ -1,9 +1,9 @@
 import "./App.css";
-import Hero from "./components/Sections/Hero";
-import About from "./components/Sections/About";
-import Contacts from "./components/Sections/Contacts";
-import Services from "./components/Sections/Services";
-import Projects from "./components/Sections/Projects";
+import Hero from "./layout/Sections/Hero";
+import About from "./layout/Sections/About";
+import Contacts from "./layout/Sections/Contacts";
+import Services from "./layout/Sections/Services";
+import Projects from "./layout/Sections/Projects";
 import Section from "./layout/Section";
 import Header from "./layout/Header";
 import SectionSeprator from "./layout/SectionSeprator";

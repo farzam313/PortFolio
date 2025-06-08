@@ -1,7 +1,22 @@
-import Button from "../Button";
-import { FaRegCopy } from "react-icons/fa";
+import Button from "../../components/Button";
+import { useState } from "react";
+import React from "react";
+import { FaRegCopy, FaArrowRight } from "react-icons/fa";
+import { BiCheckDouble } from "react-icons/bi";
 
 const Hero = () => {
+  const [copied, setCopied] = useState(false);
+  const EmailCopy = () => {
+    const email = "info@farzam.com";
+
+    navigator.clipboard.writeText(email).then(() => {
+      setCopied(true);
+      setTimeout(() => {
+        setCopied(false);
+      }, 2000);
+    });
+  };
+
   const Bio = () => (
     <div className="h-full flex flex-col justify-center items-center border-2 border-gray-600 p-8">
       <div>
@@ -23,16 +38,6 @@ const Hero = () => {
           />
           A front End Web Developer
         </h1>
-
-        <div className="flex  justify-center items-center mt-4 gap-4">
-          <Button />
-          <button className="bg-blue-300 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded">
-            {" "}
-            <div className="flex items-center gap-2">
-              <FaRegCopy /> info@farzam.com
-            </div>
-          </button>
-        </div>
       </div>
     </div>
   );
@@ -44,6 +49,14 @@ const Hero = () => {
     >
       <div className="relative max-w-full overflow-hidden mx-auto flex-1">
         <Bio />
+        <div className="flex  justify-center items-center mt-4 gap-4">
+          <Button caption="Lets Connect" Icon={FaArrowRight} />
+          <Button
+            caption={copied ? "Copied!" : "info@farzam.com"}
+            Icon={copied ? BiCheckDouble : FaRegCopy}
+            onClick={EmailCopy}
+          />
+        </div>
       </div>
     </div>
   );

@@ -1,13 +1,16 @@
 import React from "react";
-import { FaArrowRight } from "react-icons/fa";
 
-const Button = () => {
+const Button = ({ Icon, className, caption, onClick }) => {
   return (
     <div>
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      <button
+        onClick={onClick}
+        className={`bg-blue-500 hover:bg-blue-700 text-white 
+        font-bold py-2 px-4 rounded-3xl ${className}`}
+      >
         <div className="flex items-center gap-2">
-          Lets Connect
-          <FaArrowRight className="inline-block mr-2" />
+          {caption && <span>{caption}</span>}
+          {Icon && <Icon className="inline-block" />}
         </div>
       </button>
     </div>
