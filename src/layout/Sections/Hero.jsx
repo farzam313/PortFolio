@@ -57,11 +57,12 @@ const Hero = () => {
       <div className="relative max-w-full overflow-hidden mx-auto flex-1">
         <Bio />
       </div>
-      <div className="flex justify-center items-center rounded-2xl border-green-500 border-1 my-5  gap-2 ">
+      <div className="flex justify-center items-center rounded-2xl border-green-500 border-1 my-5  gap-2 lg:mt-[50px]">
         <img
           src="farzoo.png"
           alt="hero"
-          className=" h-[300px]  rounded-2xl  "
+          className=" h-[300px]  rounded-2xl lg:w-[full]  lg:h-[800px] xl:h-[500px] 2xl:h-[600px] object-cover"
+          width={400}
         />
       </div>
     </div>
