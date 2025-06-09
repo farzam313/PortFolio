@@ -1,6 +1,5 @@
 import Button from "../../components/Button";
 import { useState } from "react";
-import React from "react";
 import { FaRegCopy, FaArrowRight } from "react-icons/fa";
 import { BiCheckDouble } from "react-icons/bi";
 
@@ -13,14 +12,14 @@ const Hero = () => {
       setCopied(true);
       setTimeout(() => {
         setCopied(false);
-      }, 2000);
+      }, 1000);
     });
   };
 
   const Bio = () => (
-    <div className="h-full flex flex-col justify-center items-center border-2 border-gray-600 p-8">
+    <div className=" flex flex-col justify-center items-center text-sm font-semibold py-8 border-2 border-green-500 rounded-2xl mt-[100px] md:px-16 lg:px-20 xl:px-24 2xl:px-28">
       <div>
-        <h2 className=" text-4xl md:text-5xl lg:text-4xl font-bold text-gray-100 mb-4">
+        <h2 className=" text-2xl md:text-5xl lg:text-6xl font-light text-gray-100 mb-4">
           <span>
             I collaborate with founders to shape
             <br />
@@ -28,7 +27,7 @@ const Hero = () => {
           </span>
           <span className="font-light"> digital products</span>
         </h2>
-        <h1 className="flex flex-wrap items-center justify-center gap-2 py-[6px] object-cover  overflow-hidden text-gray-100 ">
+        <h1 className="flex flex-wrap items-center justify-center gap-2 py-[6px] object-cover  overflow-hidden text-gray-100 text-sm md:text-2xl lg:text-3xl font-semibold">
           Hello, I'm Aliyawar Farzam
           <img
             className=" rounded-3xl object-cover max-h-[55] max-w-[80px]"
@@ -39,24 +38,31 @@ const Hero = () => {
           A front End Web Developer
         </h1>
       </div>
+      <div className="flex  justify-center items-center mt-4 gap-4">
+        <Button caption="Lets Connect" Icon={FaArrowRight} />
+        <Button
+          caption={copied ? "Copied!" : "info@farzam.com"}
+          Icon={copied ? BiCheckDouble : FaRegCopy}
+          onClick={EmailCopy}
+        />
+      </div>
     </div>
   );
 
   return (
     <div
       id="hero-container"
-      className="text-center flex flex-row h-[100vh] w-full justify-center items-center"
+      className="text-center flex flex-col h-[100vh] w-[100%] justify-center items-center gap-2 md:flex-row md:gap-4  "
     >
       <div className="relative max-w-full overflow-hidden mx-auto flex-1">
         <Bio />
-        <div className="flex  justify-center items-center mt-4 gap-4">
-          <Button caption="Lets Connect" Icon={FaArrowRight} />
-          <Button
-            caption={copied ? "Copied!" : "info@farzam.com"}
-            Icon={copied ? BiCheckDouble : FaRegCopy}
-            onClick={EmailCopy}
-          />
-        </div>
+      </div>
+      <div className="flex justify-center items-center rounded-2xl border-green-500 border-1 my-5  gap-2 ">
+        <img
+          src="farzoo.png"
+          alt="hero"
+          className=" h-[300px]  rounded-2xl  "
+        />
       </div>
     </div>
   );
