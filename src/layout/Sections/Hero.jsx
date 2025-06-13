@@ -2,6 +2,7 @@ import Button from "../../components/Button";
 import { useState } from "react";
 import { FaRegCopy, FaArrowRight } from "react-icons/fa";
 import { BiCheckDouble } from "react-icons/bi";
+import SolarSystem from "../../components/Solar";
 
 const Hero = () => {
   const [copied, setCopied] = useState(false);
@@ -17,7 +18,7 @@ const Hero = () => {
   };
 
   const Bio = () => (
-    <div className=" flex flex-col justify-center items-center text-sm font-semibold py-8 border-2 border-green-500 rounded-2xl mt-[100px] md:px-16 lg:px-20 xl:px-24 2xl:px-28">
+    <div className=" flex flex-col justify-center items-center text-sm font-semibold py-8 rounded-2xl mt-[100px] md:px-16 lg:px-20 xl:px-24 2xl:px-28">
       <div>
         <h2 className=" text-2xl md:text-5xl lg:text-6xl font-light text-gray-100 mb-4">
           <span>
@@ -57,13 +58,8 @@ const Hero = () => {
       <div className="relative max-w-full overflow-hidden mx-auto flex-1">
         <Bio />
       </div>
-      <div className="flex justify-center items-center rounded-2xl border-green-500 border-1 my-5  gap-2 lg:mt-[50px]">
-        <img
-          src="farzoo.png"
-          alt="hero"
-          className=" h-[300px]  rounded-2xl lg:w-[full]  lg:h-[800px] xl:h-[500px] 2xl:h-[600px] object-cover"
-          width={400}
-        />
+      <div className="flex justify-center items-center rounded-2xl my-5 max-h-[20%] gap-2 lg:mt-[50px]">
+        <SolarSystem />
       </div>
     </div>
   );
