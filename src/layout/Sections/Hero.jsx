@@ -42,7 +42,7 @@ const Hero = () => {
       <div className="flex  justify-center items-center mt-4 gap-4">
         <Button caption="Lets Connect" Icon={FaArrowRight} />
         <Button
-          caption={copied ? "Copied!" : "info@farzam.com"}
+          caption={copied ? "Emai Copied!" : "info@farzam.com"}
           Icon={copied ? BiCheckDouble : FaRegCopy}
           onClick={EmailCopy}
         />
@@ -58,9 +58,9 @@ const Hero = () => {
       <div className="relative max-w-full overflow-hidden mx-auto flex-1">
         <Bio />
       </div>
-      <div className="flex justify-center items-center rounded-2xl my-5 max-h-[20%] gap-2 lg:mt-[50px]">
-        <SolarSystem />
-      </div>
+      {/* <div className="flex justify-center items-center rounded-2xl my-5 gap-2 lg:mt-[50px] border-2 border-green-400"> */}
+      <SolarSystem />
+      {/* </div> */}
     </div>
   );
 };

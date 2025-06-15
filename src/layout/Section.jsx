@@ -6,7 +6,10 @@ const Section = ({ id, children, className = " " }) => {
       id={id}
       className={` flex flex-col  min-h-screen   px-4 m-[8px] border-l-2 border-r-2 border-gray-500  text-gray-100 my-0 ${className}`}
     >
-      <div id="children" className="  flex-1 mx-0 max-w-full   my-auto">
+      <div
+        id="children"
+        className="  border-red-300 border-2 flex-1 mx-0 max-w-full   my-auto"
+      >
         {children}
       </div>
     </section>

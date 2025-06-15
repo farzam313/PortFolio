@@ -1,22 +1,59 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const SolarSystem = () => {
+  const [screenSize, setScreenSize] = useState({
+    width: typeof window !== 'undefined' ? window.innerWidth : 1200,
+    height: typeof window !== 'undefined' ? window.innerHeight : 800
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenSize({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Calculate scale factor based on screen size
+  const getScaleFactor = () => {
+    const baseWidth = 1200;
+    const baseHeight = 800;
+    const scaleX = screenSize.width / baseWidth;
+    const scaleY = screenSize.height / baseHeight;
+    return Math.min(scaleX, scaleY, 1.2); // Cap at 1.2x for very large screens
+  };
+
+  const scaleFactor = getScaleFactor();
+  const isMobile = screenSize.width < 768;
+  const isTablet = screenSize.width >= 768 && screenSize.width < 1024;
+
   const planets = [
-    { name: 'Mercury', size: 4, distance: 60, speed: 4.8, color: '#8C7853', moons: [] },
-    { name: 'Venus', size: 6, distance: 80, speed: 3.5, color: '#FFC649', moons: [] },
-    { name: 'Earth', size: 6, distance: 100, speed: 3.0, color: '#6B93D6', moons: [{ name: 'Moon', size: 2, distance: 12, speed: 8 }] },
-    { name: 'Mars', size: 5, distance: 120, speed: 2.4, color: '#CD5C5C', moons: [{ name: 'Phobos', size: 1, distance: 8, speed: 12 }, { name: 'Deimos', size: 1, distance: 12, speed: 8 }] },
-    { name: 'Jupiter', size: 18, distance: 150, speed: 1.3, color: '#D8CA9D', moons: [{ name: 'Io', size: 2, distance: 25, speed: 6 }, { name: 'Europa', size: 2, distance: 30, speed: 5 }, { name: 'Ganymede', size: 2.5, distance: 35, speed: 4 }, { name: 'Callisto', size: 2, distance: 40, speed: 3 }] },
-    { name: 'Saturn', size: 15, distance: 180, speed: 1.0, color: '#FAD5A5', moons: [{ name: 'Titan', size: 2.5, distance: 28, speed: 5 }, { name: 'Enceladus', size: 1.5, distance: 22, speed: 7 }] },
-    { name: 'Uranus', size: 10, distance: 210, speed: 0.7, color: '#4FD0E7', moons: [{ name: 'Titania', size: 1.5, distance: 18, speed: 6 }] },
-    { name: 'Neptune', size: 10, distance: 240, speed: 0.5, color: '#4B70DD', moons: [{ name: 'Triton', size: 2, distance: 20, speed: 5 }] }
+    { name: 'Mercury', size: 4 * scaleFactor, distance: 60 * scaleFactor, speed: 4.8, color: '#8C7853', moons: [] },
+    { name: 'Venus', size: 6 * scaleFactor, distance: 80 * scaleFactor, speed: 3.5, color: '#FFC649', moons: [] },
+    { name: 'Earth', size: 6 * scaleFactor, distance: 100 * scaleFactor, speed: 3.0, color: '#6B93D6', moons: [{ name: 'Moon', size: 2 * scaleFactor, distance: 12 * scaleFactor, speed: 8 }] },
+    { name: 'Mars', size: 5 * scaleFactor, distance: 120 * scaleFactor, speed: 2.4, color: '#CD5C5C', moons: [{ name: 'Phobos', size: 1 * scaleFactor, distance: 8 * scaleFactor, speed: 12 }, { name: 'Deimos', size: 1 * scaleFactor, distance: 12 * scaleFactor, speed: 8 }] },
+    { name: 'Jupiter', size: 18 * scaleFactor, distance: 150 * scaleFactor, speed: 1.3, color: '#D8CA9D', moons: [{ name: 'Io', size: 2 * scaleFactor, distance: 25 * scaleFactor, speed: 6 }, { name: 'Europa', size: 2 * scaleFactor, distance: 30 * scaleFactor, speed: 5 }, { name: 'Ganymede', size: 2.5 * scaleFactor, distance: 35 * scaleFactor, speed: 4 }, { name: 'Callisto', size: 2 * scaleFactor, distance: 40 * scaleFactor, speed: 3 }] },
+    { name: 'Saturn', size: 15 * scaleFactor, distance: 180 * scaleFactor, speed: 1.0, color: '#FAD5A5', moons: [{ name: 'Titan', size: 2.5 * scaleFactor, distance: 28 * scaleFactor, speed: 5 }, { name: 'Enceladus', size: 1.5 * scaleFactor, distance: 22 * scaleFactor, speed: 7 }] },
+    { name: 'Uranus', size: 10 * scaleFactor, distance: 210 * scaleFactor, speed: 0.7, color: '#4FD0E7', moons: [{ name: 'Titania', size: 1.5 * scaleFactor, distance: 18 * scaleFactor, speed: 6 }] },
+    { name: 'Neptune', size: 10 * scaleFactor, distance: 240 * scaleFactor, speed: 0.5, color: '#4B70DD', moons: [{ name: 'Triton', size: 2 * scaleFactor, distance: 20 * scaleFactor, speed: 5 }] }
   ];
 
+  // Filter planets for mobile to avoid overcrowding
+  const visiblePlanets = isMobile ? planets.slice(0, 6) : planets;
+
+  const sunSize = 40 * scaleFactor;
+  const containerWidth = isMobile ? screenSize.width * 0.9 : isTablet ? screenSize.width * 0.85 : Math.min(600 * scaleFactor, screenSize.width * 0.8);
+  const containerHeight = isMobile ? screenSize.height * 0.7 : isTablet ? screenSize.height * 0.75 : Math.min(400 * scaleFactor, screenSize.height * 0.8);
+
   return (
-    <div className="w-full h-[85vh] bg-black overflow-hidden relative flex items-center justify-center">
+    <div className="lg:w-[70vh] lg:min-h-[70vh] bg-black overflow-hidden relative flex items-center  justify-center border-green-500 border-2 w-[65%] h-[40%]">
       {/* Stars background */}
       {/* <div className="absolute inset-0">
-        {[...Array(200)].map((_, i) => (
+        {[...Array(isMobile ? 100 : 200)].map((_, i) => (
           <div
             key={i}
             className="absolute bg-white rounded-full opacity-60"
@@ -32,23 +69,31 @@ const SolarSystem = () => {
       </div> */}
 
       {/* Solar system container */}
-      <div className="relative mt-[120px] mr[30px]" style={{ width: '600px', height: '400px'  }}>
+      <div 
+        className="relative " 
+        style={{ 
+          width: containerWidth + 'px', 
+          height: containerHeight + 'px',
+          minWidth: '300px',
+          minHeight: '200px'
+        }}
+      >
         {/* Sun */}
         <div 
           className="absolute bg-yellow-400 rounded-full shadow-lg"
           style={{
-            width: '40px',
-            height: '40px',
+            width: sunSize + 'px',
+            height: sunSize + 'px',
             left: '50%',
             top: '50%',
             transform: 'translate(-50%, -50%)',
-            boxShadow: '0 0 40px #FFA500, 0 0 60px #FFA500, 0 0 80px #FF8C00',
+            boxShadow: `0 0 ${sunSize}px #FFA500, 0 0 ${sunSize * 1.5}px #FFA500, 0 0 ${sunSize * 2}px #FF8C00`,
             animation: 'pulse 2s infinite alternate'
           }}
         />
 
         {/* Orbital paths */}
-        {planets.map((planet) => (
+        {visiblePlanets.map((planet) => (
           <div
             key={`orbit-${planet.name}`}
             className="absolute border border-gray-600 border-opacity-30 rounded-full"
@@ -63,7 +108,7 @@ const SolarSystem = () => {
         ))}
 
         {/* Planets */}
-        {planets.map((planet) => (
+        {visiblePlanets.map((planet) => (
           <div
             key={planet.name}
             className="absolute"
@@ -77,7 +122,7 @@ const SolarSystem = () => {
             }}
           >
             <div
-              className="absolute rounded-full shadow-md"
+              className="absolute rounded-full shadow-md cursor-pointer hover:brightness-110 transition-all duration-300"
               style={{
                 width: planet.size + 'px',
                 height: planet.size + 'px',
@@ -85,7 +130,9 @@ const SolarSystem = () => {
                 left: '100%',
                 top: '50%',
                 transform: 'translate(-50%, -50%)',
-                boxShadow: `0 0 ${planet.size}px ${planet.color}40`
+                boxShadow: `0 0 ${planet.size}px ${planet.color}40`,
+                minWidth: '4px',
+                minHeight: '4px'
               }}
               title={planet.name}
             />
@@ -107,12 +154,14 @@ const SolarSystem = () => {
                 <div
                   className="absolute rounded-full bg-gray-300 shadow-sm"
                   style={{
-                    width: moon.size + 'px',
-                    height: moon.size + 'px',
+                    width: Math.max(moon.size, 2) + 'px',
+                    height: Math.max(moon.size, 2) + 'px',
                     left: '100%',
                     top: '50%',
                     transform: 'translate(-50%, -50%)',
-                    boxShadow: '0 0 2px rgba(255, 255, 255, 0.5)'
+                    boxShadow: '0 0 2px rgba(255, 255, 255, 0.5)',
+                    minWidth: '2px',
+                    minHeight: '2px'
                   }}
                   title={moon.name}
                 />
@@ -125,8 +174,8 @@ const SolarSystem = () => {
                 <div
                   className="absolute"
                   style={{
-                    width: planet.size + 16 + 'px',
-                    height: (planet.size + 16) * 0.25 + 'px',
+                    width: planet.size + 16 * scaleFactor + 'px',
+                    height: (planet.size + 16 * scaleFactor) * 0.25 + 'px',
                     left: '100%',
                     top: '50%',
                     transform: 'translate(-50%, -50%) scaleX(1.2) scaleY(0.6) rotate(-8deg)',
@@ -138,8 +187,8 @@ const SolarSystem = () => {
                 <div
                   className="absolute"
                   style={{
-                    width: planet.size + 12 + 'px',
-                    height: (planet.size + 12) * 0.22 + 'px',
+                    width: planet.size + 12 * scaleFactor + 'px',
+                    height: (planet.size + 12 * scaleFactor) * 0.22 + 'px',
                     left: '100%',
                     top: '50%',
                     transform: 'translate(-50%, -50%) scaleX(1.2) scaleY(0.6) rotate(-8deg)',
@@ -151,8 +200,8 @@ const SolarSystem = () => {
                 <div
                   className="absolute"
                   style={{
-                    width: planet.size + 8 + 'px',
-                    height: (planet.size + 8) * 0.2 + 'px',
+                    width: planet.size + 8 * scaleFactor + 'px',
+                    height: (planet.size + 8 * scaleFactor) * 0.2 + 'px',
                     left: '100%',
                     top: '50%',
                     transform: 'translate(-50%, -50%) scaleX(1.2) scaleY(0.6) rotate(-8deg)',
@@ -167,14 +216,16 @@ const SolarSystem = () => {
         ))}
       </div>
 
-      {/* Planet labels */}
-      {/* <div className="absolute top-4 left-4 text-white">
-        <h1 className="text-2xl font-bold mb-4">Solar System</h1>
-        <div className="space-y-1 text-sm">
-          {planets.map((planet) => (
+      {/* Planet labels - responsive positioning
+      <div className={`absolute text-white ${isMobile ? 'top-2 left-2' : 'top-4 left-4'}`}>
+        <h1 className={`font-bold mb-2 ${isMobile ? 'text-lg' : isTablet ? 'text-xl' : 'text-2xl'}`}>
+          Solar System
+        </h1>
+        <div className={`space-y-1 ${isMobile ? 'text-xs' : 'text-sm'}`}>
+          {visiblePlanets.map((planet) => (
             <div key={planet.name} className="flex items-center space-x-2">
               <div
-                className="w-3 h-3 rounded-full"
+                className={`rounded-full ${isMobile ? 'w-2 h-2' : 'w-3 h-3'}`}
                 style={{ backgroundColor: planet.color }}
               />
               <span>{planet.name}</span>
@@ -183,8 +234,15 @@ const SolarSystem = () => {
         </div>
       </div> */}
 
+      {/* Mobile info */}
+      {isMobile && (
+        <div className="absolute bottom-2 left-2 right-2 text-white text-xs text-center opacity-75">
+          Showing inner planets for mobile view
+        </div>
+      )}
+
       {/* CSS Animations */}
-      <style > {`
+      <style>{`
         @keyframes pulse {
           0% { transform: translate(-50%, -50%) scale(1); }
           100% { transform: translate(-50%, -50%) scale(1.1); }
@@ -195,14 +253,14 @@ const SolarSystem = () => {
           100% { opacity: 1; }
         }
         
-        ${planets.map(planet => `
+        ${visiblePlanets.map(planet => `
           @keyframes orbit-${planet.name} {
             from { transform: translate(-50%, -50%) rotate(0deg); }
             to { transform: translate(-50%, -50%) rotate(360deg); }
           }
         `).join('\n')}
         
-        ${planets.map(planet => 
+        ${visiblePlanets.map(planet => 
           planet.moons.map(moon => `
             @keyframes moon-orbit-${planet.name}-${moon.name} {
               from { transform: translate(-50%, -50%) rotate(0deg); }
