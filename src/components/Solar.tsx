@@ -237,7 +237,7 @@ const SolarSystem = () => {
       {/* Mobile info */}
       {isMobile && (
         <div className="absolute bottom-2 left-2 right-2 text-white text-xs text-center opacity-75">
-          Showing inner planets for mobile view
+         
         </div>
       )}
 

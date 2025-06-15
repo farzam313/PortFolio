@@ -18,7 +18,7 @@ const Hero = () => {
   };
 
   const Bio = () => (
-    <div className=" flex flex-col justify-center items-center text-sm font-semibold py-8 rounded-2xl mt-[100px] md:px-16 lg:px-20 xl:px-24 2xl:px-28">
+    <div className=" flex flex-col justify-center items-center text-sm font-semibold pb-8 rounded-2xl mt-[50px] md:px-8 lg:px-10 xl:px-15">
       <div>
         <h2 className=" text-2xl md:text-5xl lg:text-6xl font-semibold text-gray-100 mb-4">
           <span>
@@ -55,7 +55,7 @@ const Hero = () => {
       id="hero-container"
       className="text-center flex flex-col h-[100vh] w-[100%] justify-center items-center gap-2 md:flex-row md:gap-4  "
     >
-      <div className="relative max-w-full overflow-hidden mx-auto flex-1">
+      <div className="relative max-w-[100%] overflow-hidden max-h-[45%] flex-1 border-2 border-red-500 lg:max-h-[90%]">
         <Bio />
       </div>
       {/* <div className="flex justify-center items-center rounded-2xl my-5 gap-2 lg:mt-[50px] border-2 border-green-400"> */}
