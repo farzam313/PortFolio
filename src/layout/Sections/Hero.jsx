@@ -20,7 +20,7 @@ const Hero = () => {
   const Bio = () => (
     <div className=" flex flex-col justify-center items-center text-sm font-semibold py-8 rounded-2xl mt-[100px] md:px-16 lg:px-20 xl:px-24 2xl:px-28">
       <div>
-        <h2 className=" text-2xl md:text-5xl lg:text-6xl font-light text-gray-100 mb-4">
+        <h2 className=" text-2xl md:text-5xl lg:text-6xl font-semibold text-gray-100 mb-4">
           <span>
             I collaborate with founders to shape
             <br />
@@ -28,7 +28,7 @@ const Hero = () => {
           </span>
           <span className="font-light"> digital products</span>
         </h2>
-        <h1 className="flex flex-wrap items-center justify-center gap-2 py-[6px] object-cover  overflow-hidden text-gray-100 text-sm md:text-2xl lg:text-3xl font-semibold">
+        <h1 className="flex flex-wrap items-center justify-center gap-2 py-[6px] object-cover  overflow-hidden text-gray-100 text-sm md:text-2xl lg:text-2xl">
           Hello, I'm Aliyawar Farzam
           <img
             className=" rounded-3xl object-cover max-h-[55] max-w-[80px]"
