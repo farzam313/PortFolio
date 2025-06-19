@@ -1,6 +1,6 @@
 import Button from "../../components/Button";
 import { useState } from "react";
-import { FaRegCopy, FaArrowRight } from "react-icons/fa";
+import { FaRegCopy, FaArrowRight, FaDownload } from "react-icons/fa";
 import { BiCheckDouble } from "react-icons/bi";
 import SolarSystem from "../../components/Solar";
 
@@ -20,15 +20,15 @@ const Hero = () => {
   const Bio = () => (
     <div className=" flex flex-col justify-center items-center text-sm font-semibold pb-8 rounded-2xl mt-[50px] md:px-8 lg:px-10 xl:px-15">
       <div>
-        <h2 className=" text-2xl md:text-5xl lg:text-6xl font-semibold text-gray-100 mb-4">
+        <h2 className=" text-2xl md:text-5xl lg:text-5xl font-semibold text-gray-100 mb-4">
           <span>
             I collaborate with founders to shape
             <br />
             ideas into impactful
           </span>
-          <span className="font-light"> digital products</span>
+          <span className="font-light "> digital products</span>
         </h2>
-        <h1 className="flex flex-wrap items-center justify-center gap-2 py-[6px] object-cover  overflow-hidden text-gray-100 text-sm md:text-2xl lg:text-2xl">
+        <h1 className="flex flex-wrap items-center justify-center gap-2 py-[10px] object-cover  overflow-hidden text-gray-100 text-sm md:text-2xl lg:text-2xl">
           Hello, I'm Aliyawar Farzam
           <img
             className=" rounded-3xl object-cover max-h-[55] max-w-[80px]"
@@ -39,12 +39,19 @@ const Hero = () => {
           A front End Web Developer
         </h1>
       </div>
-      <div className="flex  justify-center items-center mt-4 gap-4">
+      <div className="flex  flex-col justify-center items-center my-8 gap-2 md:flex-row">
         <Button caption="Lets Connect" Icon={FaArrowRight} />
         <Button
           caption={copied ? "Emai Copied!" : "info@farzam.com"}
           Icon={copied ? BiCheckDouble : FaRegCopy}
           onClick={EmailCopy}
+        />
+
+        <Button
+          caption="Download CV"
+          Icon={FaDownload}
+          link="./AliyawarFarzam_CV.pdf"
+          download
         />
       </div>
     </div>
