@@ -39,7 +39,7 @@ const Hero = () => {
           A front End Web Developer
         </h1>
       </div>
-      <div className="flex  flex-col justify-center items-center my-8 gap-2 md:flex-row">
+      <div className="flex  flex-col justify-center  items-center my-3 gap-2 md:flex-row">
         <Button caption="Lets Connect" Icon={FaArrowRight} />
         <Button
           caption={copied ? "Emai Copied!" : "info@farzam.com"}
@@ -62,7 +62,7 @@ const Hero = () => {
       id="hero-container"
       className="text-center flex flex-col h-[100vh] w-[100%] justify-center items-center gap-2 md:flex-row md:gap-4  "
     >
-      <div className="relative max-w-[100%] overflow-hidden max-h-[45%] flex-1  lg:max-h-[90%]">
+      <div className="relative max-w-[100%] overflow-hidden max-h-[45%] flex-1  lg:max-h-[90%] mt-auto mb-auto">
         <Bio />
       </div>
       {/* <div className="flex justify-center items-center rounded-2xl my-5 gap-2 lg:mt-[50px] border-2 border-green-400"> */}
