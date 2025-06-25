@@ -29,7 +29,7 @@ const Hero = () => {
           <span className="font-light "> digital products</span>
         </h2>
         <h1 className="flex flex-wrap items-center justify-center gap-2 py-[10px] object-cover  overflow-hidden text-gray-100 text-sm md:text-2xl lg:text-2xl">
-          Hello, I'm Aliyawar Farzam
+          Hello, I am Aliyawar Farzam
           <img
             className=" rounded-3xl object-cover max-h-[55] max-w-[80px]"
             src="Far.JPG"
@@ -62,7 +62,7 @@ const Hero = () => {
       id="hero-container"
       className="text-center flex flex-col h-[100vh] w-[100%] justify-center items-center gap-2 md:flex-row md:gap-4  "
     >
-      <div className="relative max-w-[100%] overflow-hidden max-h-[45%] flex-1  lg:max-h-[90%] mt-auto mb-auto">
+      <div className="relative max-w-[100%] overflow-hidden max-h-[55%] flex-1  lg:max-h-[90%] mt-auto mb-auto border-2 border-green-400 ">
         <Bio />
       </div>
       {/* <div className="flex justify-center items-center rounded-2xl my-5 gap-2 lg:mt-[50px] border-2 border-green-400"> */}

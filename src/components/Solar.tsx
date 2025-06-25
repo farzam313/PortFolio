@@ -50,7 +50,7 @@ const SolarSystem = () => {
   const containerHeight = isMobile ? screenSize.height * 0.7 : isTablet ? screenSize.height * 0.75 : Math.min(400 * scaleFactor, screenSize.height * 0.8);
 
   return (
-    <div className="lg:w-[70vh] lg:min-h-[70vh] border-2 border-amber-200 bg-black overflow-hidden relative flex items-center  justify-center  w-[65%] h-[20%] ">
+    <div className="lg:w-[70vh] lg:min-h-[70vh] border-2 border-green-400 bg-black overflow-hidden relative flex items-center  justify-center  w-[65%] h-[20%] ">
       {/* Stars background */}
       {/* <div className="absolute inset-0">
         {[...Array(isMobile ? 100 : 200)].map((_, i) => (
