@@ -7,7 +7,7 @@ import SolarSystem from "../../components/Solar";
 const Hero = () => {
   const [copied, setCopied] = useState(false);
   const EmailCopy = () => {
-    const email = "info@ali.com";
+    const email = "info@farzam.com";
 
     navigator.clipboard.writeText(email).then(() => {
       setCopied(true);
@@ -28,10 +28,10 @@ const Hero = () => {
           </span>
           <span className="font-light "> digital products</span>
         </h2>
-        <h1 className="flex flex-wrap items-center justify-center gap-2 py-[10px] object-cover  overflow-hidden text-gray-100 text-sm md:text-2xl lg:text-2xl">
+        <h1 className="flex flex-wrap items-center justify-center gap-2 py-[10px] object-cover  text-gray-100 text-sm md:text-2xl lg:text-2xl">
           Hello, I am Aliyawar Farzam
           <img
-            className=" rounded-3xl object-cover max-h-[55] max-w-[80px]"
+            className=" rounded-3xl object-cover max-h-[55] max-w-[80px] hidden lg:block"
             src="Far.JPG"
             width={70}
             height={55}
@@ -42,7 +42,7 @@ const Hero = () => {
       <div className="flex  flex-col justify-center  items-center my-3 gap-2 md:flex-row">
         <Button caption="Lets Connect" Icon={FaArrowRight} />
         <Button
-          caption={copied ? "Emai Copied!" : "info@ali.com"}
+          caption={copied ? "Email Copied!" : "info@ali.com"}
           Icon={copied ? BiCheckDouble : FaRegCopy}
           onClick={EmailCopy}
         />
@@ -62,7 +62,7 @@ const Hero = () => {
       id="hero-container"
       className="text-center flex flex-col h-[100vh] w-[100%] justify-center items-center gap-2 md:flex-row md:gap-4  "
     >
-      <div className="relative max-w-[100%] overflow-hidden max-h-[45%] flex-1    lg:h-[80%] mt-25">
+      <div className="relative max-w-[100%]  max-h-[45%] flex-1    lg:h-[80%] mt-25">
         <Bio />
       </div>
 
