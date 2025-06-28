@@ -3,21 +3,33 @@ import { FaArrowRight } from "react-icons/fa";
 import Card from "../../components/Card";
 
 const Services = () => {
+  const services = [
+    {
+      photo: "../../../Dashboard.jpg",
+      description:
+        "I will design, develop and deploy any types of dashboard for you.",
+    },
+    {
+      photo: "../../../mobileDesign.jpg",
+      description:
+        "I will create a responsive mobile design for your application.",
+    },
+    {
+      photo: "../../../page.jpg",
+      description:
+        "I will build a landing page that converts visitors into customers.",
+    },
+    {
+      photo: "../../../GC.jpg",
+      description: "I will provide graphic design services for your brand.",
+    },
+  ];
   return (
     <>
-      <h1 className="flex justify-center text-center  my-10">
-        Services-Under Construction...
-      </h1>
-      {/* <img
-        src="../../construction.jpg"
-        alt="Under Construction"
-        className="w-[50%] h-[65%] mx-auto object-cover"
-      /> */}
-      <div className="flex flex-wrap justify-center items-center gap-4 mt-30">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+      <div className="flex flex-row justify-center items-center gap-2 mt-45">
+        {services.map((service) => (
+          <Card photo={service.photo} description={service.description} />
+        ))}
       </div>
     </>
   );
