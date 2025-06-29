@@ -42,7 +42,7 @@ const Hero = () => {
       <div className="flex  flex-col justify-center  items-center my-3 gap-2 md:flex-row">
         <Button caption="Lets Connect" Icon={FaArrowRight} />
         <Button
-          caption={copied ? "Email Copied!" : "info@ali.com"}
+          caption={copied ? "Email Copied!" : "Copy Email"}
           Icon={copied ? BiCheckDouble : FaRegCopy}
           onClick={EmailCopy}
         />
