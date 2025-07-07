@@ -35,14 +35,14 @@ const Hero = () => {
             src="Far.JPG"
             width={70}
             height={55}
-          />
+          />{" "}
           A front End Web Developer
         </h1>
       </div>
       <div className="flex  flex-col justify-center  items-center my-3 gap-2 md:flex-row">
         <Button caption="Lets Connect" Icon={FaArrowRight} />
         <Button
-          caption={copied ? "Email Copied!" : "Copy Email"}
+          caption={copied ? "Email Copied!" : "Copy Email "}
           Icon={copied ? BiCheckDouble : FaRegCopy}
           onClick={EmailCopy}
         />

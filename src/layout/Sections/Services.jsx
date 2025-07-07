@@ -27,8 +27,12 @@ const Services = () => {
   return (
     <>
       <div className="flex flex-row flex-wrap gap-x-15 h-[100vh] items-center w-[100wh] justify-center ">
-        {services.map((service) => (
-          <Card photo={service.photo} description={service.description} />
+        {services.map((service, key) => (
+          <Card
+            photo={service.photo}
+            description={service.description}
+            key={key}
+          />
         ))}
       </div>
     </>
