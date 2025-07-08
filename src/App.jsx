@@ -7,7 +7,6 @@ import Projects from "./layout/Sections/Projects";
 import Section from "./layout/Section";
 import Header from "./layout/Header";
 import SectionSeprator from "./layout/SectionSeprator";
-import DeveloperLogo from "./layout/DeveloperLogo";
 
 function App() {
   return (
