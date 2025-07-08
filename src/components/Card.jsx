@@ -6,10 +6,6 @@ import PopUp from "./PopUp";
 const Card = ({ photo, description, fullDescription }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleClick = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
     <>
       <div

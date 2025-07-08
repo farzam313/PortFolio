@@ -31,8 +31,16 @@ const PopUp = ({ isOpen, togglePopup, description, photo }) => {
       className="fixed z-50 left-0 top-0 w-full h-full bg-opacity-50 flex items-center justify-center  backdrop-blur-sm bg-white/20 p-12"
       onClick={handleBackdropClick}
     >
-      <div className="bg-white p-6 rounded-lg shadow-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+      <div className="bg-white p-3 rounded-lg shadow-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
         <div className="mb-6">
+          <div className="flex justify-end mb-4">
+            <button
+              onClick={handleCloseClick}
+              className=" text-white px-4 py-2 rounded hover:bg-red-600 transition-colors"
+            >
+              ❌
+            </button>
+          </div>
           {photo && (
             <img
               src={photo}
@@ -44,14 +52,14 @@ const PopUp = ({ isOpen, togglePopup, description, photo }) => {
             <p className="text-lg text-black leading-relaxed">{description}</p>
           )}
         </div>
-        <div className="flex justify-end">
+        {/* <div className="flex justify-end">
           <button
             onClick={handleCloseClick}
             className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition-colors"
           >
             Close ❌
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
