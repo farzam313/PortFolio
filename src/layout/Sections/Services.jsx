@@ -1,5 +1,3 @@
-import Button from "../../components/Button";
-import { FaArrowRight } from "react-icons/fa";
 import Card from "../../components/Card";
 
 const Services = () => {
@@ -38,13 +36,17 @@ const Services = () => {
   ];
 
   return (
-    <div className="flex flex-row flex-wrap gap-x-15 h-[100vh] items-center w-[100wh] justify-center ">
+    <div className="flex flex-row flex-wrap gap-x-8 h-[100vh] items-center w-[100wh] justify-center ">
       {services.map((service) => (
         <Card
           photo={service.photo}
           description={service.description}
           fullDescription={service.fullDescription}
           key={service.id}
+          className={
+            " flex flex-row w-[100%] lg:flex-col h-[22%] lg:w-[320px] lg:h-[400px]  items-center border-1 border-gray-400 rounded-lg my-1 min-w-[320px]"
+          }
+          imageStyle={"h-[70%] lg:h-[200px] mx-auto py-2"}
         />
       ))}
     </div>
