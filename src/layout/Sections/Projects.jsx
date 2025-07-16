@@ -3,19 +3,19 @@ import Card from "../../components/Card";
 const Projects = () => {
   const projects = [
     {
-      photo: "../../Brainwave.jpg",
+      photo: "../../brnwave.JPG",
       description: "AI Chatbot landing page.",
       fullDescription:
         "This project is a landing page for an AI chatbot that provides users with an interactive experience.",
     },
     {
-      photo: "../../Calculator.jpg",
+      photo: "../../calc.JPG",
       description: "A simple calculator application.",
       fullDescription:
         "A basic calculator that performs arithmetic operations.",
     },
     {
-      photo: "../../Portfilio.jpg",
+      photo: "../../Ptflo.JPG",
       description: "Portfolio website showcasing projects.",
       fullDescription: "Personal portfolio website with projects and skills.",
     },

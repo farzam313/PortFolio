@@ -44,9 +44,9 @@ const Services = () => {
           fullDescription={service.fullDescription}
           key={service.id}
           className={
-            " flex flex-row w-[100%] lg:flex-col h-[22%] lg:w-[320px] lg:h-[400px]  items-center border-1 border-gray-400 rounded-lg my-1 min-w-[320px]"
+            " flex flex-row w-[100%] lg:flex-col h-[22%] lg:w-[320px] lg:h-[400px]  items-center border-1 border-gray-400 rounded-lg my-1 min-w-[320px] flex-shrink-0"
           }
-          imageStyle={"h-[70%] lg:h-[200px] mx-auto py-2"}
+          imageStyle={"h-[70%] lg:h-[200px] mx-auto  py-2"}
         />
       ))}
     </div>
