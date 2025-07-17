@@ -9,13 +9,18 @@ const Card = ({
   fullDescription,
   className,
   imageStyle,
+  link,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
       <div id="Card" className={`  ${className}`}>
-        <img src={photo} className={`${imageStyle}`} />
+        <img
+          src={photo}
+          className={`${imageStyle}`}
+          onClick={() => setIsOpen(!isOpen)}
+        />
         <div className="flex flex-col items-center justify-between w-[50%] h-[90%] lg:h-[150px] lg:w-[300px] mx-auto  ">
           <p className="lg:mt-4  lg:font-serif font-light p-3 ">
             {description}
@@ -36,6 +41,7 @@ const Card = ({
         togglePopup={setIsOpen}
         description={fullDescription}
         photo={photo}
+        link={link}
       />
     </>
   );

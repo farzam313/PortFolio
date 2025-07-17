@@ -7,23 +7,27 @@ const Projects = () => {
       description: "AI Chatbot landing page.",
       fullDescription:
         "This project is a landing page for an AI chatbot that provides users with an interactive experience.",
+      link: "https://farzamchat.netlify.app/",
     },
     {
       photo: "../../calc.JPG",
       description: "A simple calculator application.",
       fullDescription:
         "A basic calculator that performs arithmetic operations.",
+      link: "https://calculat1t.netlify.app/",
     },
     {
       photo: "../../Ptflo.JPG",
       description: "Portfolio website showcasing projects.",
       fullDescription: "Personal portfolio website with projects and skills.",
+      link: "https://alifarzam.netlify.app/",
     },
     {
       photo: "../../Book.jpg",
       description: "Book Sharing Platform.",
       fullDescription:
         "Enables users to share book, Magazines Journals and any e-reading materials, and access others.",
+      link: "https://ebookswiki.netlify.app/",
     },
     // Add more projects as needed
   ];
@@ -42,6 +46,7 @@ const Projects = () => {
                 " flex flex-row w-[100%] lg:flex-col h-[22%] lg:w-[320px] lg:h-[400px]  items-center border-1 border-gray-400 rounded-lg my-1 min-w-[320px]"
               }
               imageStyle={"h-[70%] lg:h-[200px] mx-auto py-2"}
+              link={project.link}
             />
           ))}
         </div>

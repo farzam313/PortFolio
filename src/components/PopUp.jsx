@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 
-const PopUp = ({ isOpen, togglePopup, description, photo }) => {
+const PopUp = ({ isOpen, togglePopup, description, photo, link }) => {
   const [shouldRender, setShouldRender] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   useEffect(() => {
@@ -64,6 +64,16 @@ const PopUp = ({ isOpen, togglePopup, description, photo }) => {
           )}
           {description && (
             <p className="text-lg text-black leading-relaxed">{description}</p>
+          )}
+          {link && (
+            <a
+              href={link}
+              target="_blank"
+              className="text-blue-500 hover:underline border-2 border-blue-500 px-4 py-2 rounded-lg mt-4 inline-block"
+            >
+              {" "}
+              View Project
+            </a>
           )}
         </div>
       </div>
