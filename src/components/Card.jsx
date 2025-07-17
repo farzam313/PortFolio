@@ -15,12 +15,13 @@ const Card = ({
 
   return (
     <>
-      <div id="Card" className={`  ${className}`}>
-        <img
-          src={photo}
-          className={`${imageStyle}`}
-          onClick={() => setIsOpen(!isOpen)}
-        />
+      <div
+        id="Card"
+        onClick={() => setIsOpen(!isOpen)}
+        cursor="pointer"
+        className={`  ${className}`}
+      >
+        <img src={photo} className={`${imageStyle}`} alt="Card Image" />
         <div className="flex flex-col items-center justify-between w-[50%] h-[90%] lg:h-[150px] lg:w-[300px] mx-auto  ">
           <p className="lg:mt-4  lg:font-serif font-light p-3 ">
             {description}
