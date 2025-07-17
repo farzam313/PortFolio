@@ -1,9 +1,10 @@
 import React from "react";
+import ContactUS from "../../components/ContactUS";
 
 const About = () => {
   return (
     <div className="text-center my-10">
-      <p className="mt-4 text-lg">Contact US.</p>
+      <ContactUS />
     </div>
   );
 };

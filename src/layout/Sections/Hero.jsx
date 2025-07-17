@@ -40,7 +40,13 @@ const Hero = () => {
         </h1>
       </div>
       <div className="flex  flex-col justify-center  items-center my-3 gap-2 md:flex-row">
-        <Button caption="Lets Connect" Icon={FaArrowRight} />
+        <Button
+          caption="Lets Connect"
+          Icon={FaArrowRight}
+          onClick={() => {
+            window.location.href = "#contacts";
+          }}
+        />
         <Button
           caption={copied ? "Email Copied!" : "Copy Email "}
           Icon={copied ? BiCheckDouble : FaRegCopy}
@@ -50,7 +56,7 @@ const Hero = () => {
         <Button
           caption="Download CV"
           Icon={FaDownload}
-          link="./AliyawarFarzam_CV.pdf"
+          link="./AF_NEXP_FNT.pdf"
           download
         />
       </div>
