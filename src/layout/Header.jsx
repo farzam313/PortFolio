@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="hidden md:flex  fixed justify-between top-0 left-0 w-full bg-gray-800 text-white h-16 z-50">
+      <header className="hidden lg:flex  fixed justify-between top-0 left-0 w-full bg-gray-800 text-white h-16 z-50">
         <div className="flex items-center justify-between  h-full w-full">
           {<Icon />}
 
@@ -33,7 +33,7 @@ const Header = () => {
         </div>
       </header>
 
-      <header className="md:hidden fixed flex-col top-0 left-0 w-full  text-white z-50 shadow-md">
+      <header className="lg:hidden fixed flex-col top-0 left-0 w-full  text-white z-50 shadow-md">
         <div className="flex items-center bg-gray-800 justify-between w-full py-4 mb-[0.9px]">
           <Icon />
           <ToggleMenu />

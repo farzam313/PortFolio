@@ -36,19 +36,25 @@ const Services = () => {
   ];
 
   return (
-    <div className="flex flex-row flex-wrap gap-x-8 h-[100vh] items-center w-[100wh] justify-center ">
-      {services.map((service) => (
-        <Card
-          photo={service.photo}
-          description={service.description}
-          fullDescription={service.fullDescription}
-          key={service.id}
-          className={
-            " flex flex-row w-[100%] lg:flex-col h-[22%] lg:w-[320px] lg:h-[400px]  items-center border-1 border-gray-400 rounded-lg my-1 min-w-[320px] flex-shrink-0 hover:cursor-pointer "
-          }
-          imageStyle={"h-[70%] lg:h-[200px] mx-auto  py-2"}
-        />
-      ))}
+    <div className="flex flex-col items-center w-full h-full my-8 ">
+      <h2 className="flex justify-center text-center font-bold text-2xl my-4">
+        {" "}
+        My services.
+      </h2>
+      <div className="flex flex-row flex-wrap gap-x-10 gap-y-3 my-auto items-center w-[100wh] justify-center ">
+        {services.map((service) => (
+          <Card
+            photo={service.photo}
+            description={service.description}
+            fullDescription={service.fullDescription}
+            key={service.id}
+            className={
+              " flex flex-row w-[100%] lg:flex-col h-[22%] lg:w-[320px] lg:h-[400px]  items-center border-1 border-gray-400 rounded-lg my-auto min-w-[320px] hover:cursor-pointer "
+            }
+            imageStyle={"w-[25%] lg:w-[200px] mx-auto  py-2"}
+          />
+        ))}
+      </div>
     </div>
   );
 };

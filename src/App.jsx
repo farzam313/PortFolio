@@ -16,20 +16,20 @@ function App() {
         <Hero />
       </Section>
       <SectionSeprator />
-      <Section id="services" className="snap-start h-screen ">
+      <Section id="services" className="snap-start  ">
         <Services />
       </Section>
       <SectionSeprator />
-      <Section id="projects" className="snap-start h-screen">
+      <Section id="projects" className="snap-start ">
         <Projects />
       </Section>
       <SectionSeprator />
 
-      <Section id="contacts" className="snap-start h-screen">
+      <Section id="contacts" className="snap-start ">
         <Contacts />
       </Section>
       <SectionSeprator />
-      <Section id="about" className="snap-start h-screen">
+      <Section id="about" className="snap-start ">
         <About />
       </Section>
       <SectionSeprator />

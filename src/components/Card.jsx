@@ -22,7 +22,7 @@ const Card = ({
         className={`  ${className}`}
       >
         <img src={photo} className={`${imageStyle}`} alt="Card Image" />
-        <div className="flex flex-col items-center justify-between w-[50%] h-[90%] lg:h-[150px] lg:w-[300px] mx-auto  ">
+        <div className="flex flex-col items-center py-3 justify-between w-[50%] h-[90%] lg:h-[150px] lg:w-[300px] mx-auto  ">
           <p className="lg:mt-4  lg:font-serif font-light p-3 ">
             {description}
           </p>
@@ -31,7 +31,7 @@ const Card = ({
               onClick={() => setIsOpen(!isOpen)}
               caption={"View Details"}
               Icon={FaArrowRight}
-              className="flex flex-end h-[30px] text-sm  "
+              className=" flex flex-end h-[30px] text-sm  "
             />
           </div>
         </div>
