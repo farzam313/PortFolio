@@ -71,7 +71,6 @@ const PopUp = ({ isOpen, togglePopup, description, photo, link }) => {
               target="_blank"
               className="text-blue-500 hover:underline border-2 border-blue-500 px-4 py-2 rounded-lg mt-4 inline-block"
             >
-              {" "}
               View Project
             </a>
           )}

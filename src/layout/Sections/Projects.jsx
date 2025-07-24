@@ -33,12 +33,12 @@ const Projects = () => {
   ];
   return (
     <>
-      <h2 className="flex justify-center text-center font-bold text-2xl my-15 align-center">
+      <h2 className="flex justify-center text-center font-bold text-2xl align-center border-2 border-blue-500 mb-10">
         {" "}
         The Projects I have done.
       </h2>
       <div>
-        <div className="flex flex-row flex-wrap gap-x-10 gap-y-3 my-auto items-center w-[100wh] justify-center   ">
+        <div className="flex flex-row flex-wrap gap-x-10 gap-y-3 my-auto items-center w-[100wh] justify-center    ">
           {projects.map((project, index) => (
             <Card
               key={index}
@@ -48,7 +48,7 @@ const Projects = () => {
               className={
                 "flex flex-row w-[100%] lg:flex-col h-[22%] lg:w-[320px] lg:h-[400px]  items-center border-1 border-gray-400 rounded-lg min-w-[320px] cursor-pointer"
               }
-              imageStyle={"w-[25%] lg:w-[200px] mx-auto py-2"}
+              imageStyle={"w-[25%] lg:w-[200px] mx-auto  py-2"}
               link={project.link}
             />
           ))}
