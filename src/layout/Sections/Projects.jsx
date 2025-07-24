@@ -33,12 +33,13 @@ const Projects = () => {
   ];
   return (
     <>
-      <h2 className="flex justify-center text-center font-bold text-2xl align-center border-2 border-blue-500 mb-10">
+      <h2 className="flex justify-center text-center font-bold text-2xl align-center border-1 p-4 border-green-500 rounded-lg mb-10">
         {" "}
         The Projects I have done.
       </h2>
       <div>
-        <div className="flex flex-row flex-wrap gap-x-10 gap-y-3 my-auto items-center w-[100wh] justify-center    ">
+        <div className="flex flex-row flex-wrap gap-x-10 gap-y-3 my-auto items-center w-[100wh] justify-center border-2 border-green-500 p-4 rounded-lg">
+          {" "}
           {projects.map((project, index) => (
             <Card
               key={index}
