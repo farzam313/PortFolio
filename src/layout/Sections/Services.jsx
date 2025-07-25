@@ -39,7 +39,7 @@ const Services = () => {
     <div className=" flex flex-col items-center justify-items-center w-full  h-full  ">
       <h2 className="flex justify-center text-center font-bold text-2xl   my-3 align-center p-4 rounded-lg border-1 border-green-500">
         {" "}
-        My services.
+        My services
       </h2>
       <div className="flex flex-row flex-wrap gap-x-10 gap-y-3 items-center w-[100wh] justify-center border-2 border-green-500 p-4 rounded-lg">
         {services.map((service) => (
@@ -51,7 +51,7 @@ const Services = () => {
             className={
               " flex flex-row w-[100%] lg:flex-col h-[22%] lg:w-[320px] lg:h-[400px]  items-center border-1 border-gray-400 rounded-lg my-auto min-w-[320px] hover:cursor-pointer "
             }
-            imageStyle={"w-[25%] lg:w-[200px] mx-auto  py-2"}
+            imageStyle={"w-[25%] lg:w-[200px] mx-auto  py-2 h-45 object-fit"}
           />
         ))}
       </div>

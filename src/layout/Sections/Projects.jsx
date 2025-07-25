@@ -49,7 +49,7 @@ const Projects = () => {
               className={
                 "flex flex-row w-[100%] lg:flex-col h-[22%] lg:w-[320px] lg:h-[400px]  items-center border-1 border-gray-400 rounded-lg min-w-[320px] cursor-pointer"
               }
-              imageStyle={"w-[25%] lg:w-[200px] mx-auto  py-2"}
+              imageStyle={"w-[25%] lg:w-[200px] mx-auto  py-2 h-45 object-fit"}
               link={project.link}
             />
           ))}
