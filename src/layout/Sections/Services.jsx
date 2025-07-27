@@ -36,12 +36,12 @@ const Services = () => {
   ];
 
   return (
-    <div className=" flex flex-col items-center justify-items-center w-full  h-full  ">
-      <h2 className="flex justify-center text-center font-bold text-2xl   my-3 align-center p-4 rounded-lg border-1 border-green-500">
+    <div className=" flex flex-col items-center justify-items-center w-full  h-full gap-y-15 ">
+      <h2 className="flex justify-center text-center font-bold text-2xl   my-3 align-center p-4 rounded-lg border-2 border-green-500">
         {" "}
         My services
       </h2>
-      <div className="flex flex-row flex-wrap gap-x-10 gap-y-3 items-center w-[100wh] justify-center border-2 border-green-500 p-4 rounded-lg">
+      <div className="flex flex-row flex-wrap gap-x-10 gap-y-3 items-center w-[100wh] justify-center p-4 rounded-lg border-2 border-green-500">
         {services.map((service) => (
           <Card
             photo={service.photo}

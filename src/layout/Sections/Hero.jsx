@@ -66,7 +66,7 @@ const Hero = () => {
   return (
     <div
       id="hero-container"
-      className="text-center flex flex-col h-[100vh] w-[100%] justify-center items-center gap-2 md:flex-row md:gap-4  "
+      className="text-center flex flex-col w-[100%] justify-center items-center gap-2 md:flex-row md:gap-4  "
     >
       <div className="relative max-w-[100%]  max-h-[45%] flex-1    lg:h-[80%] mt-25">
         <Bio />

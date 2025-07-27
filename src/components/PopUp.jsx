@@ -57,6 +57,8 @@ const PopUp = ({ isOpen, togglePopup, description, photo, link }) => {
           </div>
           {photo && (
             <img
+              height={300}
+              width={300}
               src={photo}
               alt="Service"
               className="w-full h-90 object-cover rounded-lg mb-4"
