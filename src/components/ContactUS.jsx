@@ -1,8 +1,34 @@
 import React from "react";
 import Button from "./Button";
 import { FaRegCommentDots } from "react-icons/fa";
+import { useRef } from "react";
+import emailjs from "emailjs-com";
+import SocialMedia from "./SocialMedia";
 
 const ContactUS = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_3qac08p", // e.g., service_xyz123
+        "template_1fvvvkb", // e.g., template_abc456
+        form.current,
+        "xMkipuT8QpbH2ag_U" //  // e.g., XyZ789PublicKey( Public key)
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message sent successfully!");
+          form.current.reset(); // Clear form after submission
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Failed to send message.");
+        }
+      );
+  };
   return (
     <div
       id="contact-container"
@@ -25,56 +51,54 @@ const ContactUS = () => {
         </div>
       </div>
       <div className="flex flex-col lg:flex-row items-center justify-center w-full h-full p-4 border-2 border-green-500  rounded-lg ">
-        <div className="flex flex-col p-4 border-2 border-gray-500 m-4 rounded-lg">
-          <p>phone: +918180986348</p>
-          <br />
-          <p>Email: alifarzam@gmail.com</p>
-        </div>
-        <div className="flex flex-col border-2 border-gray-500 p-4 rounded-lg">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="flex flex-col border-2 border-gray-500 p-4 rounded-lg"
+        >
           <div className="flex flex-row items-center justify-center w-full  h-full p-4 border-2 border-gray-50 rounded-lg gap-x-3">
             <div>
-              <caption className="text-md font-light text-gray-700 text-nowrap  mb-4 ">
-                Your name
-              </caption>
               <input
                 type="text"
+                name="name"
                 placeholder="Name*"
                 className="border-1 border-gray-50"
               />
             </div>
 
             <div>
-              {" "}
-              <caption className="text-md font-light text-gray-700 mb-4 text-nowrap">
-                your Email
-              </caption>
               <input
                 type="text"
+                name="email"
                 placeholder="Email*"
                 className="border-1 border-gray-50"
               />
             </div>
           </div>
-          <caption className="text-xl fornt-light text-gray-500 mb-4 ">
-            Subject
-          </caption>
+
           <input
             type="text"
+            name="subject"
             placeholder="Subject*"
             className="p-2 border-2 border-gray-300 rounded-lg mb-4"
           />
           <textarea
             placeholder="Message*"
+            name="message"
             rows="6"
             className="p-2 border-2 border-gray-300 rounded-lg mb-4"
           />
 
-          <Button
-            caption={"Send Message"}
-            Icon={FaRegCommentDots}
-            className="w-full h-12 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors justify-center items-center"
-          />
-        </div>
+          <button
+            type="submit"
+            onClick={sendEmail}
+            className="w-full h-12 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors flex justify-center items-center gap-2"
+          >
+            <FaRegCommentDots />
+            Send Message
+          </button>
+        </form>
+        <SocialMedia />
       </div>
     </div>
   );
