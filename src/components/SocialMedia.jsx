@@ -10,7 +10,7 @@ import {
 
 const SocialMedia = () => {
   return (
-    <div className="flex flex-col px-8 py-8 items-center gap-8 text-2xl mt-2  rounded-lg m-2 ">
+    <div className="flex flex-row  lg:flex-col px-8 py-8 items-center gap-8 text-2xl mt-2  rounded-lg m-2 ">
       <a
         href="https://facebook.com"
         target="_blank"

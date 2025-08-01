@@ -1,12 +1,15 @@
 import React from "react";
 import ContactUS from "../../components/ContactUS";
 
-const About = () => {
+const Contact = () => {
   return (
-    <div className="text-center my-10">
+    <div
+      id="section"
+      className="text-center my-6 border-2 border-amber-500 rounded-lg items-center justify-center"
+    >
       <ContactUS />
     </div>
   );
 };
 
-export default About;
+export default Contact;
