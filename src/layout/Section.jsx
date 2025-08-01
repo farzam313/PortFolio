@@ -8,7 +8,7 @@ const Section = ({ id, children, className = " " }) => {
     >
       <div
         id="children"
-        className=" flex-1 flex items-center flex-col justify-center mx-0  max-w-full border-2 border-red-600  my-auto"
+        className=" flex-1 flex items-center flex-col justify-center mx-0  max-w-full  my-auto"
       >
         {children}
       </div>

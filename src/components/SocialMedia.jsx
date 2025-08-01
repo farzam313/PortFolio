@@ -10,7 +10,8 @@ import {
 
 const SocialMedia = () => {
   return (
-    <div className="flex flex-row  lg:flex-col px-8 py-8 items-center gap-8 text-2xl mt-2  rounded-lg m-2 ">
+    <div className="flex flex-row  lg:flex-col px-4 py-4 items-center gap-4 text-2xl mt-2  rounded-lg m-2  lg:gap-y-10">
+      {" "}
       <a
         href="https://facebook.com"
         target="_blank"
@@ -19,7 +20,6 @@ const SocialMedia = () => {
       >
         <FaFacebook />
       </a>
-
       <a
         href="https://discord.com"
         target="_blank"
@@ -28,7 +28,6 @@ const SocialMedia = () => {
       >
         <FaDiscord />
       </a>
-
       <a
         href="https://www.instagram.com/a.farxam/"
         target="_blank"
@@ -37,7 +36,6 @@ const SocialMedia = () => {
       >
         <FaInstagram />
       </a>
-
       <a
         href="https://www.linkedin.com/in/farxam/"
         target="_blank"
@@ -46,7 +44,6 @@ const SocialMedia = () => {
       >
         <FaLinkedin />
       </a>
-
       <a
         href="https://wa.me/918180986348"
         target="_blank"

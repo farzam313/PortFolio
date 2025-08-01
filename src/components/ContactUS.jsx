@@ -30,35 +30,38 @@ const ContactUS = () => {
   return (
     <div
       id="contact-container"
-      className="flex flex-col pt-3 justify-center items-center w-[95%] h-full  text-green-500 border-2 gap-y-2 border-green-500 rounded-lg p-4  "
+      className="flex flex-col pt-3 justify-center items-center w-[100%] h-full  text-green-500 border-2 gap-y-2 border-green-500 rounded-lg p-4  "
     >
-      <div className="flex flex-col items-center justify-center w-[95%] h-[100%] p-4 gap-y-3 border-2 border-yellow-500 rounded-lg">
-        <h2 className="text-3xl">Let's Discus your Project</h2>
-        <p className="flex-wrap text-center">
-          Always available for freelancing.
-        </p>
+      <div className="flex flex-col lg:flex-row items-center   h-[100%] p-4 justify-between gap-x-16 gap-y-3  rounded-lg">
+        <div>
+          <h2 className=" text-lg lg:text-5xl">Let's Discus your Project</h2>
+          <p className="flex-wrap text-center text-sm lg:text-2xl">
+            Always available for freelancing if the right project comes along,
+            Feel free to contact me.
+          </p>
+        </div>
         <img
           src="../../Far.JPG"
           alt="Contact Us"
-          height={150}
-          width={150}
-          className=" object-cover rounded-lg"
+          height={300}
+          width={300}
+          className=" object-cover rounded-lg h-[150px] w-[150px] lg:h-[300px] lg:w-[300px]"
         />
       </div>
 
-      <div className="flex flex-col lg:flex-row items-center justify-center w-full h-full p-4 border-2 border-green-500  rounded-lg ">
+      <div className="flex flex-col lg:flex-row items-center justify-center w-full h-full   rounded-lg ">
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="flex flex-col border-2 border-gray-500 p-4 rounded-lg"
+          className="flex flex-col gap-y-2 p-4 rounded-lg"
         >
-          <div className="flex flex-col items-center justify-center w-full  h-full p-4 border-2 border-gray-50 rounded-lg gap-x-1">
+          <div className="flex flex-col lg:flex-row items-center justify-center w-full  h-full p-4 border-2 border-gray-50 rounded-lg gap-x-3 gap-y-1.5">
             <div>
               <input
                 type="text"
                 name="name"
                 placeholder="Name*"
-                className="border-1 border-gray-50"
+                className="border-1 border-gray-300 rounded-md"
               />
             </div>
 
@@ -67,7 +70,7 @@ const ContactUS = () => {
                 type="text"
                 name="email"
                 placeholder="Email*"
-                className="border-1 border-gray-50"
+                className="border-1 border-gray-300 rounded-md"
               />
             </div>
           </div>
