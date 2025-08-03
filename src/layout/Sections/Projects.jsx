@@ -33,7 +33,7 @@ const Projects = () => {
   ];
   return (
     <>
-      <h2 className="flex justify-center text-center font-bold text-2xl align-center  p-4 rounded-lg mb-10">
+      <h2 className="flex justify-center text-center font-bold text-2xl text-gray-50 align-center  p-4 rounded-lg mb-10">
         {" "}
         The Projects I have done.
       </h2>
@@ -47,7 +47,7 @@ const Projects = () => {
               description={project.description}
               fullDescription={project.fullDescription}
               className={
-                "flex flex-row w-[100%] lg:flex-col h-[22%] lg:w-[320px] lg:h-[400px]  items-center border-1 border-gray-400 rounded-lg min-w-[320px] cursor-pointer"
+                "flex flex-row w-[100%] lg:flex-col h-[22%] lg:w-[320px] lg:h-[400px] text-gray-50  items-center border-1 border-gray-400 rounded-lg min-w-[320px] cursor-pointer"
               }
               imageStyle={"w-[25%] lg:w-[200px] mx-auto  py-2 h-45 object-fit"}
               link={project.link}

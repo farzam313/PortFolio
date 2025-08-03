@@ -30,12 +30,12 @@ const ContactUS = () => {
   return (
     <div
       id="contact-container"
-      className="flex flex-col pt-3 justify-center items-center w-[100%] h-full  text-green-500  gap-y-2  rounded-lg p-4  "
+      className="flex flex-col pt-3 justify-center items-center w-[100%] h-full  text-gray-50  gap-y-2  rounded-lg p-4 font-sans "
     >
       <div className="flex flex-col lg:flex-row items-center   h-[100%] p-4 justify-between gap-x-16 gap-y-3  rounded-lg ">
         <div className="flex flex-col items-center justify-center text-center gap-y-2 mb-10">
-          <h2 className=" text-lg lg:text-5xl">Let's Discus your Project</h2>
-          <p className="flex-wrap text-center text-sm lg:text-2xl">
+          <h2 className=" text-lg lg:text-5xl ">Let's Discus your Project</h2>
+          <p className="flex-wrap text-center text-sm lg:text-2xl ">
             Always available for freelancing if the right project comes along,
             Feel free to contact me.
           </p>
@@ -46,7 +46,7 @@ const ContactUS = () => {
             alt="Contact Us"
             height={300}
             width={300}
-            className=" object-cover  rounded-lg h-[150px] w-[150px] lg:h-[350px] lg:w-[350px]"
+            className=" object-cover  rounded-lg h-[200px] w-[200px] lg:h-[350px] lg:w-[350px]"
           />
         </div>
       </div>
@@ -55,36 +55,58 @@ const ContactUS = () => {
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="flex flex-col gap-y-2 p-4 rounded-lg"
+          className="flex flex-col gap-y-2 p-4 rounded-lg "
         >
           <div className="flex flex-col lg:flex-row items-center justify-center w-full  h-full  rounded-lg gap-x-3 gap-y-1.5 ">
+            <div id="name-container" className="w-full">
+              <caption className="flex">
+                {" "}
+                Enter your Name <span className="text-red-600"> *</span>{" "}
+              </caption>
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                className="border-2 border-green-500 rounded-md h-[45px] w-full "
+              />
+            </div>
+            <div id="name-container" className="w-full">
+              <caption className="flex">
+                {" "}
+                Enter your email <span className="text-red-600"> *</span>{" "}
+              </caption>
+              <input
+                type="text"
+                name="email"
+                placeholder="Email"
+                className="border-2 border-green-500 rounded-md h-[45px] w-full "
+              />
+            </div>
+          </div>
+          <div id="subject-container" className="flex flex-col">
+            <div className="flex  w-full">
+              <caption className="flex">
+                Enter a subject <span className="text-red-600"> *</span>
+              </caption>
+            </div>
             <input
               type="text"
-              name="name"
-              placeholder="Name*"
-              className="border-2 border-green-500 rounded-md h-[45px] "
-            />
-
-            <input
-              type="text"
-              name="email"
-              placeholder="Email*"
-              className="border-2 border-green-500 rounded-md h-[42px]"
+              name="subject"
+              placeholder="Subject"
+              className="p-2 border-2 border-green-500 rounded-lg mb-4 h-[45px]"
             />
           </div>
-
-          <input
-            type="text"
-            name="subject"
-            placeholder="Subject*"
-            className="p-2 border-2 border-green-500 rounded-lg mb-4"
-          />
-          <textarea
-            placeholder="Message*"
-            name="message"
-            rows="6"
-            className="p-2 border-2 border-green-500 rounded-lg mb-4"
-          />
+          <div id="message-container" className="w-full flex flex-col">
+            <caption className="flex flex-row">
+              Please write your message.<span className="text-red-600"> *</span>
+            </caption>
+            <textarea
+              placeholder="Message*"
+              name="message"
+              rows="5"
+              className="p-2 border-2 border-green-500 rounded-lg mb-4"
+            />
+          </div>
 
           <button
             type="submit"

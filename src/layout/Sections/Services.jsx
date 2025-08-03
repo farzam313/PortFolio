@@ -37,7 +37,7 @@ const Services = () => {
 
   return (
     <div className=" flex flex-col items-center justify-items-center w-full  h-full gap-y-15 ">
-      <h2 className="flex justify-center text-center font-bold text-2xl   my-3 align-center p-4 rounded-lg ">
+      <h2 className="flex justify-center text-center font-bold text-2xl  text-gray-50 my-3 align-center p-4 rounded-lg ">
         {" "}
         My services
       </h2>
@@ -49,7 +49,7 @@ const Services = () => {
             fullDescription={service.fullDescription}
             key={service.id}
             className={
-              " flex flex-row w-[100%] lg:flex-col h-[22%] lg:w-[320px] lg:h-[400px]  items-center border-1 border-gray-400 rounded-lg my-auto min-w-[320px] hover:cursor-pointer "
+              " flex flex-row w-[100%] lg:flex-col h-[22%] lg:w-[320px] lg:h-[400px] text-gray-50  items-center border-1 border-gray-400 rounded-lg my-auto min-w-[320px] hover:cursor-pointer "
             }
             imageStyle={"w-[25%] lg:w-[200px] mx-auto  py-2 h-45 object-fit"}
           />
