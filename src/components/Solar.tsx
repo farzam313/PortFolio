@@ -51,22 +51,7 @@ const SolarSystem = () => {
 
   return (
     <div className="lg:w-[70vh] lg:min-h-[70vh] mb-15 bg-black overflow-hidden relative flex items-center  justify-center  w-[63%] h-[35%] lg:pt-15">
-      {/* Stars background */}
-      {/* <div className="absolute inset-0">
-        {[...Array(isMobile ? 100 : 200)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute bg-white rounded-full opacity-60"
-            style={{
-              width: Math.random() * 2 + 'px',
-              height: Math.random() * 2 + 'px',
-              left: Math.random() * 100 + '%',
-              top: Math.random() * 100 + '%',
-              animation: `twinkle ${Math.random() * 3 + 2}s infinite alternate`
-            }}
-          />
-        ))}
-      </div> */}
+     
 
       {/* Solar system container */}
       <div 

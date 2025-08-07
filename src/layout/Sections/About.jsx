@@ -3,15 +3,15 @@ import TechStackIcons from "../../components/TechStack";
 
 const About = () => {
   return (
-    <div className="text-center  flex flex-row gap-10 items-center justify-center h-[100vh] text-gray-100">
-      <div className="flex flex-col w-[50%] border-1 border-gray-100 p-4 rounded-lg items-left  gap-4">
-        <p className="flex items-center justify-left border-1 border-green-400 p-4 rounded-lg">
+    <div className="text-center flex  flex-col lg:flex-row gap-10 items-center justify-center  text-gray-100">
+      <div className="flex flex-col lg:w-[50%] border-1 border-gray-100 p-4 rounded-lg items-left  gap-4">
+        <p className="flex items-center justify-left border-1 border-green-400 p-4 font-bold text-2xl rounded-lg">
           About me.
         </p>
-        <h2 className="flex items-center justify-left border-1 border-green-400 p-4 rounded-lg text-2xl font-bold">
+        <h2 className="flex items-center justify-left border-1 border-green-400 p-4 rounded-lg text-2xl font-bold ">
           I am Aliyawar Farzam a full stack web developer.
         </h2>
-        <p className="flex items-center justify-left border-1 border-green-400 p-4 rounded-lg text-2xl font-bold">
+        <p className="flex items-center justify-left border-1 border-green-400 p-4 rounded-lg lg:text-2xl font-bold">
           I have a passion for creating dynamic and responsive web applications.
           With a strong foundation in both front-end and back-end technologies,
           I strive to deliver seamless user experiences and robust

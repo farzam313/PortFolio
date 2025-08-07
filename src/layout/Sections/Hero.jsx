@@ -2,7 +2,7 @@ import Button from "../../components/Button";
 import { useState } from "react";
 import { FaRegCopy, FaArrowRight, FaDownload } from "react-icons/fa";
 import { BiCheckDouble } from "react-icons/bi";
-import SolarSystem from "../../components/Solar";
+import TechStackSolarSystem from "../../components/TechStackSolarSystem";
 
 const Hero = () => {
   const [copied, setCopied] = useState(false);
@@ -36,7 +36,7 @@ const Hero = () => {
             width={70}
             height={55}
           />{" "}
-          A front End Web Developer
+          A Full Stack Web Developer
         </h1>
       </div>
       <div className="flex  flex-col justify-center  items-center my-3 gap-2 md:flex-row">
@@ -72,7 +72,7 @@ const Hero = () => {
         <Bio />
       </div>
 
-      <SolarSystem />
+      <TechStackSolarSystem className="flex-1 max-w-[100%] max-h-[45%] lg:h-[80%] mt-25" />
     </div>
   );
 };

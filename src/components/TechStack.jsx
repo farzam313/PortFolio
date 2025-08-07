@@ -9,7 +9,7 @@ import {
 
 const TechStackIcons = () => {
   return (
-    <div className="flex flex-wrap gap-4 text-4xl">
+    <div className="flex flex-wrap gap-1 lg:gap-4 text-4xl">
       <FaReact title="React.JS" style={{ color: "#61DAFB" }} />{" "}
       {/* React Blue */}
       <SiTailwindcss title="TailwindCSS" style={{ color: "#06B6D4" }} />{" "}
