@@ -35,7 +35,9 @@ const Navbar = ({ className, setIsOpen }) => {
   }, []);
 
   return (
-    <nav className={`flex items-center justify-center h-full ${className}`}>
+    <nav
+      className={`flex items-center justify-center h-full  gap-x-15 ${className}`}
+    >
       {navItems.map((item) => (
         <a
           key={item.id}

@@ -2,6 +2,8 @@ import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import DeveloperLogo from "./DeveloperLogo";
 import NavBar from "./Navbar";
+import Button from "../components/Button";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +18,7 @@ const Header = () => {
 
   const Icon = () => (
     <a href="#home" onClick={() => setIsOpen(false)}>
-      <div className="block items-center justify-between h-[50px]   px-4">
+      <div className="block items-center justify-between h-[50px]  px-4">
         <DeveloperLogo />
       </div>
     </a>
@@ -24,11 +26,21 @@ const Header = () => {
 
   return (
     <>
-      <header className="hidden lg:flex  fixed justify-between top-0 left-0 w-full bg-gray-800 text-white h-16 z-50 font-sans shadow-md">
-        <div className="flex items-center justify-between  h-full w-full">
+      <header className="hidden lg:flex  fixed justify-between top-0 left-0 w-full bg-gray-800 text-white h-16 z-50 font-sans shadow-md ">
+        <div className="flex items-center justify-between  h-full w-full ">
           {<Icon />}
 
           {<NavBar className="gap-4 px-4 " />}
+          {
+            <div className="flex items-center justify-center h-full mx-8 ">
+              <Button
+                className=""
+                caption="Whatsapp"
+                link="https://wa.me/918180986348"
+                Icon={FaWhatsapp}
+              />
+            </div>
+          }
         </div>
       </header>
 

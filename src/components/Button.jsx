@@ -5,6 +5,7 @@ const Button = ({ Icon, className, caption, onClick, link, download }) => {
     return (
       <a
         href={link}
+        target="_blank"
         download={download}
         className="bg-green-500 hover:bg-green-300 text-white 
       font-bold py-2 px-4 rounded-3xl flex items-center gap-2"
