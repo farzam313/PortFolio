@@ -75,6 +75,14 @@ const TechStackSolarSystem = () => {
       color: "#ffffff",
     },
     {
+      name: "Next.js",
+      icon: SiNextdotjs,
+      size: 26,
+      distance: 240,
+      speed: 0.5,
+      color: "#ffffff",
+    },
+    {
       name: "MongoDB",
       icon: SiMongodb,
       size: 28,
@@ -97,14 +105,6 @@ const TechStackSolarSystem = () => {
       distance: 210,
       speed: 0.7,
       color: "#F05032",
-    },
-    {
-      name: "Next.js",
-      icon: SiNextdotjs,
-      size: 26,
-      distance: 240,
-      speed: 0.5,
-      color: "#ffffff",
     },
   ];
 
@@ -167,7 +167,7 @@ const TechStackSolarSystem = () => {
         {visiblePlanets.map((planet) => (
           <div
             key={`orbit-${planet.name}`}
-            className="absolute border-1 border-gray-300 border-opacity-20 rounded-full"
+            className="absolute border-1 border-gray-500 border-opacity-20 rounded-full"
             style={{
               width: `${planet.distance * 2}px`,
               height: `${planet.distance * 2}px`,
