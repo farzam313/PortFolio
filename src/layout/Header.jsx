@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="hidden lg:flex  fixed justify-between top-0 left-0 w-full bg-gray-800 text-white h-16 z-50">
+      <header className="hidden lg:flex  fixed justify-between top-0 left-0 w-full bg-gray-800 text-white h-16 z-50 font-sans shadow-md">
         <div className="flex items-center justify-between  h-full w-full">
           {<Icon />}
 

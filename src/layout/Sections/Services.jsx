@@ -36,7 +36,7 @@ const Services = () => {
   ];
 
   return (
-    <div className=" flex flex-col items-center justify-items-center w-full  h-full gap-y-15 ">
+    <div className=" flex flex-col items-center justify-items-center w-full font-sans  h-full gap-y-15 ">
       <h2 className="flex justify-center text-center font-bold text-2xl  text-gray-50 my-3 align-center p-4 rounded-lg ">
         {" "}
         My services

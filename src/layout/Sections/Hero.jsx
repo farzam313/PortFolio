@@ -18,7 +18,7 @@ const Hero = () => {
   };
 
   const Bio = () => (
-    <div className=" flex flex-col justify-center items-center text-sm font-semibold rounded-2xl  md:px-8 lg:px-10 xl:px-15">
+    <div className=" flex flex-col justify-center items-center text-sm font-semibold font-sans rounded-2xl  md:px-8 lg:px-10 xl:px-15">
       <div>
         <h2 className=" text-2xl md:text-5xl lg:text-5xl font-semibold text-gray-100 mb-4">
           <span>
