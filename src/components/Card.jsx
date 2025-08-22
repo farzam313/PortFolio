@@ -25,11 +25,11 @@ const Card = ({
           width={200}
           height={150}
           src={photo}
-          className={`${imageStyle}`}
+          className={`${imageStyle} `}
           alt="Card Image"
         />
-        <div className="flex flex-col items-center py-3 justify-between w-[50%] h-[90%] lg:h-[200px] lg:w-[300px] mx-auto  ">
-          <p className="lg:mt-4  lg:font-serif font-light p-3 ">
+        <div className="flex flex-col items-center py-3 justify-between w-[50%] h-[90%] lg:h-[200px] lg:w-[300px] mx-auto font-sans ">
+          <p className="lg:mt-4  lg:font-sans font-sans font-light p-3 ">
             {description}
           </p>
           <div className="flex justify-center lg:w-full w-[100%]  lg:mt-15 ">

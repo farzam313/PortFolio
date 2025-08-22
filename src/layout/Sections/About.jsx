@@ -9,8 +9,7 @@ const About = () => {
           About me.
         </p>
         <h2 className="flex items-center justify-center   p-4 rounded-lg text-2xl font-bold gap-2 ">
-          I am <span className="text-green-400"> Aliyawar Farzam </span> a full
-          stack web developer.
+          I am Aliyawar Farzam a full stack web developer.
         </h2>
         <p className="flex items-center justify-center   p-4 rounded-lg lg:text-1xl font-bold">
           I have a passion for creating dynamic and responsive web applications.
@@ -29,7 +28,7 @@ const About = () => {
           src="../../Farzoo.jpg"
           height={500}
           width={700}
-          className="flex justify-ceter items-center border-1 border-gray-400 rounded-lg  object-cover "
+          className="flex justify-center items-center border-1 border-gray-400 rounded-lg  object-cover "
           alt="About Us"
         />
       </div>

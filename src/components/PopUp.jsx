@@ -36,7 +36,7 @@ const PopUp = ({ isOpen, togglePopup, description, photo, link }) => {
 
   return (
     <div
-      className={`fixed z-50 left-0 top-0 w-full h-full flex items-center justify-center backdrop-blur-[1px] bg-white/10 p-12 transition-all duration-300 ease-in-out ${
+      className={`fixed z-50 left-0 top-0 w-full h-full flex items-center justify-center backdrop-blur-[1px] bg-white/10 p-12 transition-all duration-300 ease-in-out  font-sans ${
         isAnimating ? "opacity-100" : "opacity-95"
       }`}
       onClick={handleBackdropClick}
