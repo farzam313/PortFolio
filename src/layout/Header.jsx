@@ -47,6 +47,14 @@ const Header = () => {
       <header className="lg:hidden fixed flex-col top-0 left-0 w-full  text-white z-50 shadow-md">
         <div className="flex items-center bg-gray-800 justify-between w-full py-4 mb-[0.9px]">
           <Icon />
+          <div className="flex items-center justify-center text-sm ">
+            <Button
+              className=""
+              caption="Whatsapp"
+              link="https://wa.me/918180986348"
+              Icon={FaWhatsapp}
+            />
+          </div>
           <ToggleMenu />
         </div>
         <div>
