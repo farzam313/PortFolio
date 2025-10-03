@@ -129,7 +129,7 @@ const TechStackSolarSystem = () => {
     : Math.min(400 * scaleFactor, screenSize.height * 0.8);
 
   return (
-    <div className="lg:w-[70vh] lg:min-h-[70vh] mb-5 bg-black overflow-hidden relative flex items-center justify-center w-[70%] h-[30%] lg:pt-15 rounded-xl shadow-lg border border-gray-700">
+    <div className="lg:w-[70vh] lg:min-h-[70vh] mb-5 bg-black overflow-hidden relative flex items-center justify-center w-[70%] h-[30%] lg:pt-15 rounded-xl shadow-lg">
       <div
         className="relative"
         style={{
