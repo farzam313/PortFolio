@@ -67,7 +67,7 @@ const ContactUS = () => {
                 type="text"
                 name="name"
                 placeholder="Name"
-                className="border-2 border-green-500 rounded-md h-[45px] w-full "
+                className="border-2 p-2 border-green-500 rounded-md h-[45px] w-full "
               />
             </div>
             <div id="name-container" className="w-full">
@@ -79,7 +79,7 @@ const ContactUS = () => {
                 type="text"
                 name="email"
                 placeholder="Email"
-                className="border-2 border-green-500 rounded-md h-[45px] w-full "
+                className="border-2 p-2 border-green-500 rounded-md h-[45px] w-full "
               />
             </div>
           </div>

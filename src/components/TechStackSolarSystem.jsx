@@ -114,7 +114,7 @@ const TechStackSolarSystem = () => {
     distance: planet.distance * scaleFactor,
   }));
 
-  const visiblePlanets = isMobile ? scaledPlanets.slice(0, 6) : scaledPlanets;
+  const visiblePlanets = isMobile ? scaledPlanets.slice(0, 8) : scaledPlanets;
 
   const sunSize = 50 * scaleFactor;
   const containerWidth = isMobile
