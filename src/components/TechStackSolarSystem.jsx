@@ -123,20 +123,20 @@ const TechStackSolarSystem = () => {
     ? screenSize.width * 0.85
     : Math.min(600 * scaleFactor, screenSize.width * 0.8);
   const containerHeight = isMobile
-    ? screenSize.height * 0.7
+    ? screenSize.height * 0.4
     : isTablet
     ? screenSize.height * 0.75
     : Math.min(400 * scaleFactor, screenSize.height * 0.8);
 
   return (
-    <div className="lg:w-[70vh] lg:min-h-[70vh] mb-5 bg-black overflow-hidden relative flex items-center justify-center w-[70%] h-[30%] lg:pt-15 rounded-xl shadow-lg">
+    <div className="lg:w-[70vh] lg:min-h-[70vh] mb-5 bg-black overflow-hidden relative flex items-center justify-center w-[70%] h-[50%] lg:py-5 lg:mt-15 rounded-xl shadow-lg ">
       <div
         className="relative"
         style={{
           width: `${containerWidth}px`,
           height: `${containerHeight}px`,
-          minWidth: "300px",
-          minHeight: "200px",
+          minWidth: "200px",
+          minHeight: "100px",
         }}
       >
         {/* Sun */}
