@@ -56,7 +56,7 @@ const Hero = () => {
         <Button
           caption="Download CV"
           Icon={FaDownload}
-          link="./AF_NEXP_FNT.pdf"
+          link="./AlifarzamCV.pdf"
           download
         />
       </div>
